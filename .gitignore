@@ -3,3 +3,5 @@ iam.json
 *.csv
 *.srt
 *.mp3
+*.txt
+.DS_Store
