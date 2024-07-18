@@ -80,6 +80,58 @@ This command will:
 - Create an SRT file named `my_story_audio.srt`
 - Set the speech speed to 1.2x normal speed
 
+Certainly! I'd be happy to write a brief section introducing the SRT tool to your README.md. Here's a suggested addition that you can place after the "Roadmap" section:
+
+## SRT Tool
+
+The SRT Tool is a companion utility for story2dub that allows for manipulation of SRT subtitle files. This command-line tool provides various functions to modify SRT files, enhancing the flexibility of your storytelling projects.
+
+### Current Features
+
+- **Timestamp Shifting**: Adjust the timing of all subtitles in an SRT file forward or backward.
+
+### Usage
+
+To use the SRT Tool, run the following command:
+
+```
+
+python srt_tool.py <command> [options]
+
+```
+
+Available commands:
+
+- `shift`: Shift subtitle timestamps
+
+For more information on each command, use:
+
+```
+
+python srt_tool.py <command> --help
+
+```
+
+### Example
+
+To shift all subtitles in a file forward by 5 seconds:
+
+```
+
+python srt_tool.py shift subtitle.srt --seconds 5
+
+```
+
+To shift subtitles backward by 1 minute and save to a new file:
+
+```
+
+python srt_tool.py shift subtitle.srt --minutes 1 --minus --output new_subtitle.srt
+
+```
+
+The SRT Tool complements story2dub by providing post-processing capabilities for your generated subtitles, allowing for fine-tuning of subtitle timing to perfectly match your audio.
+
 ## Notes
 
 - The script creates a working directory named after your input CSV file. This directory contains individual audio clips for each line and an updated CSV file with additional information.
@@ -90,3 +142,11 @@ This command will:
 
 - If you encounter errors related to Google Cloud authentication, ensure your credentials are correctly set up and the Text-to-Speech API is enabled for your project.
 - For issues with audio processing, make sure you have the necessary audio codecs installed on your system for pydub to work correctly.
+
+## Roadmap
+
+- Support for the other languages.
+
+```
+
+```
